@@ -43,7 +43,7 @@ const main = (async() => {
       signedUrl = signedUrl.replace(/(?<=https:\/\/{1})([\w\d\-\.]+)/, CUSTOM_DOMAIN);
     }
 
-    if(OUTPUT && OUTPUT.toLowerCase() == 'curl') {
+    if(OUTPUT && OUTPUT == 'curl') {
       const mimeType = mime.lookup(FILENAME);
       if(CMD == 'get') {
         console.log(`curl -X GET "${signedUrl}"`);
